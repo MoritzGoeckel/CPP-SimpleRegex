@@ -20,7 +20,7 @@ std::string SimpleRegex::get(int index){
 
 bool SimpleRegex::next() {
     if(iterator != end){
-        ++(iterator);
+        ++(iterator); //This is not working at all...
         return true;
     }
     else
