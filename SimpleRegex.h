@@ -2,12 +2,14 @@
 #define SIMPLEREGEXHEADER
 
 #include <string>
+#include <regex>
 
 class SimpleRegex{
 
     private:
         std::sregex_iterator iterator;
-        std::sregex_iterator end;
+        std::string text;
+        std::regex regexPtrn;
 
 public:
         std::string get(int index);
@@ -16,4 +18,4 @@ public:
 
 };
 
-#endif //SIMPLEREGEXHEADER
+#endif

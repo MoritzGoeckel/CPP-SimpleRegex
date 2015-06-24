@@ -6,21 +6,19 @@
 #include <iostream>
 #include "SimpleRegex.h"
 
-SimpleRegex::SimpleRegex(std::string str, std::string pattern) {
-    std::regex regexPtrn(pattern);
-    iterator = std::sregex_iterator(str.begin(), str.end(), regexPtrn);
-    end = std::sregex_iterator();
+SimpleRegex::SimpleRegex(std::string text, std::string pattern) {
+    this->regexPtrn = std::regex(pattern);
+    this->text = text;
+    this->iterator = std::sregex_iterator(this->text.begin(), this->text.end(), regexPtrn);
 }
 
 std::string SimpleRegex::get(int index){
-    std::smatch m = *iterator;
-    std::cout << m.str() << " at position " << m.position() << '\n';
     return (*iterator)[index];
 }
 
 bool SimpleRegex::next() {
-    if(iterator != end){
-        ++(iterator); //This is not working at all...
+    if(iterator != std::sregex_iterator()){
+        ++iterator;
         return true;
     }
     else
