@@ -1,5 +1,5 @@
 # CPP-SimpleRegex
-This is a facade class to make a regex search in C++ a bit more simple and more object oriented.
+This is a facade class to make a regex search in C++ a bit more easy and a bit more object oriented.
 
 ##Usage:
 ```cpp
@@ -17,3 +17,4 @@ schoene
 neue
 Welt
 ```
+
