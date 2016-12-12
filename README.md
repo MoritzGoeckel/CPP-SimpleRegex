@@ -1,4 +1,4 @@
-# CPP-SimpleRegex
+# SimpleRegex in C++
 This is a facade class to make a regex search in C++ a bit more easy and a bit more object oriented.
 
 ##Usage:
